@@ -1,0 +1,188 @@
+*{
+    overflow:auto;
+}
+/* lorsu'on fait un bloc avec *{} tout ce qui est coder à l'intérieur sera appliqué à l'ensemble de la page.
+Les styles dit "générique se placent en début de code car c'est la dernière ligne de code qui prends le dessus.
+Par exemple dans le cas présent si on défini un overflow pour un bloc et que l'overflow "générique" se trouve après l'overflow du bloc,
+alors le "gébérique" s'appliquera au bloc même si ce n'est pas le but recherché*/
+
+body{
+    background-color: #8BA1BB;
+    font-family: Arial;
+    margin: 0;
+}
+/* le fait définir une "class" ou un "id" permet d'appliquer les paramètres qui se trouve dans son bloc
+au bloc de la page qui porte le nom de la classe. Par exemple ci-dessous le(s) paragraphe(s) qui auront
+la classe "catégorie" dans leur balise se verons appliquer les paramètres ci-dessous*/
+p.categorie{
+    background-color: black;
+    color: white;
+    display: inline-block;                
+    margin-top: -15px;
+    margin-bottom: 0;
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+
+div.contenu{
+    
+    background-color: white;
+    margin: 40px 8px 40px 8px;
+    /* "margin" permet de definir les marges exterieures, si une seule valuer est renseignee alors ce sera une valeur globale,
+    en revanche il est possible de définir individuellement chaque marge comme dans l'exemple ci-dessus.
+    l'ordre de définition sera toujours haut, droite, bas, gauche. Il est possible de "régler" les marges de différentes
+    manière, on peut définir directement le nombre de pixels, définir le % de la page qui sera utilisé etc*/
+    padding: 0px 8px 20px 8px;
+    /* "padding" lui permet de définir les marges intérieures et fonctionne de la même manière que "margin"*/
+    
+    box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+    overflow: visible;
+}
+h1{
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    
+}
+p.description{
+    text-align: center;
+    width: 400px;
+    display: inline-block;
+    font-size: 14px;
+}
+.centre{
+    text-align: center;
+    width: 100%;
+}
+div.categorie{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow:visible;
+}
+div.separateur{
+    background-color: black;
+    height: 1px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    /*display: inline-block;*/
+}
+div.info{
+    position: relative;
+    
+}
+table.info{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: #6C829DC0;
+    height: 50px;
+    
+}
+table.info td{
+    text-align: center;
+    font-size: 12px ;
+    vertical-align: top;
+}
+table.info th{
+    text-align: center;
+    font-size: 14px ;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+}
+img.info{
+    display: block; 
+    max-height: 400px;
+    min-height: 200px;
+    object-fit: cover;
+    background-color: lightgray;
+}
+div.colonne{
+    width: 100%;
+    margin-top: 20px;
+
+}
+div.colonne h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 5px solid  #6C829D;
+    padding-bottom: 5px;
+}
+div.colonne1 p{
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 8px 0px;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+div.colonne1{   
+    display: inline-block;
+}
+
+table.preparation p.numero{
+    background-color: #6C829D;
+    color:white;
+    text-align: center;
+    width:25px;
+    height: 25px;
+    font-size: 14px;
+    padding-top: 4px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: 0;
+}
+table.preparation td{
+    vertical-align: top;
+}
+table.preparation td.preparation_etape{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+table.preparation tr{
+    height: 40px;
+}
+/* STYLE POUR ORDINATEUR*/
+
+@media only screen and (min-width: 768px){
+    div.contenu{
+        min-width: 390px;
+        margin: 60px 10% 80px 10%;
+        padding: 0px 30px 30px 30px;
+        
+    }
+    table.info{        
+        height: 80px;        
+    }
+    table.info td{        
+        font-size: 14px ;        
+    }
+    table.info th{        
+        font-size: 16px ;       
+    }
+    div.colonne2{
+        float: right;        
+    }
+    div.colonne1{
+        margin-right: 10%;        
+    }
+    div.colonne{
+        width: 45%;            
+    }
+    
+}
+@media only screen and (min-width: 900px){
+    div.contenu{
+        width: 645px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        
+    }
+}
